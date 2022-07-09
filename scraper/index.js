@@ -1,8 +1,13 @@
-const express = require('Express');
+const express = require('express');
+const auth_route = require('./mangaDex/auth_route.js')
 
 const app = express();
-const port = 5000;
+const port = 3000;
 
-app.get('/', function (req, res) {
-    res.send('GET request to homepage')
-  })
+app.use(express.json());
+
+app.post('/auth', auth_route)
+
+app.listen(port, () => {
+  console.log(`server running on port ${port}`)
+});

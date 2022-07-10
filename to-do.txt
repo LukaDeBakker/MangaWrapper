@@ -1,0 +1,8 @@
+To do list
+
+1. Create user if not exists in database when using /auth.
+2. Credit mangadex in the readme
+    2.1 Learn how readme's work.
+3. Create route to retrieve the feed for a user.
+4. Think about how i'm going to scrape the pages of manga's 
+    4.1 Also how i'm going to insert these into the database.

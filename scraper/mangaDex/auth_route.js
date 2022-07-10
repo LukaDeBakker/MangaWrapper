@@ -27,6 +27,7 @@ module.exports = async function(req, res, next) {
     .then(res => res.json())
     .then(data => {return res.json({
         result: data.result,
-        errors: data.errors
+        errors: data.errors,
+        token: data.token
     })})
 }

@@ -1,4 +1,5 @@
 const fetch = require('node-fetch');
+const database = require('../database.js')
 
 var mangaDexUrl = 'https://api.mangadex.org'
 
@@ -13,6 +14,7 @@ module.exports = async function(req, res, next) {
         "password": password
     }
 
+    let user = await database.createUserIfNotExists(username)
     // Call URL and retrieve data.
     // Then return this data.
     await fetch(`${mangaDexUrl}/auth/login`, 
